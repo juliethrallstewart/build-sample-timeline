@@ -1,7 +1,6 @@
 import React, {useContext, useState} from 'react';
 import Context from '../contexts/Context'
 import SparkleImg from '../assets/twitter-data/images/sparkles.png'
-import SocialMediaIconsImg from '../assets/twitter-data/images/social-icons-img.png'
 
 
 const TimelineComponent = () => {
@@ -68,10 +67,10 @@ const TimelineComponent = () => {
             </div>
             <div className="user-container">
                 <div className="user-image-container">
-                    <img className="profile-pic" src={require(`../assets/twitter-data/images/${user.image}`).default} alt={user.name}></img>
+                    <img className="user-home-profile-pic" src={require(`../assets/twitter-data/images/${user.image}`).default} alt={user.name}></img>
                 </div>
                 <div className="tweet-container">
-                    <div className={tweetButtonDisabled ? "tweet-input-container-no-border" : "tweet-input-container-border"}>
+                    <div className={tweetButtonDisabled ? "user-tweet-input-container-no-border" : "user-tweet-input-container-border"}>
                         <form id="tweet-form" onSubmit={handleSubmit} onClick={handleTweetTextBoxClick}>
                             <textarea 
                                 type="textarea"
@@ -82,19 +81,18 @@ const TimelineComponent = () => {
                                 className="tweet-text-area"
                             ></textarea>
                         </form>
-                        <img className={!tweetButtonDisabled ? "tweet-visibility-status" : "tweet-status-hidden"}src={require('../assets/twitter-data/images/tweetVisibilityStatus.png').default}></img>
+                        <img className={!tweetButtonDisabled ? "user-tweet-visibility-status" : "user-tweet-status-hidden"}src={require('../assets/twitter-data/images/tweetVisibilityStatus.png').default}></img>
                     </div>
-                    <div className="social-media-container">
-                        <div className="social-media-icons-container">
-                            <img className="social-media-icons-img" src={require('../assets/twitter-data/images/picture.png').default}></img>
-                            <img className="social-media-icons-img" src={require('../assets/twitter-data/images/gif.png').default}></img>
-                            <img className="social-media-icons-img" src={require('../assets/twitter-data/images/poll.png').default}></img>
-                            <img className="social-media-icons-img" src={require('../assets/twitter-data/images/emoji.png').default}></img>
-                            <img className="social-media-icons-img" src={require('../assets/twitter-data/images/schedule.png').default}></img>
-
+                    <div className="user-social-media-container">
+                        <div className="user-social-media-icons-container">
+                            <a href="/" className="user-icon"><img className="user-social-media-icons-img" src={require('../assets/twitter-data/images/picture.png').default}></img></a>
+                            <a href="/" className="user-icon"><img className="user-social-media-icons-img" src={require('../assets/twitter-data/images/gif.png').default}></img></a>
+                            <a href="/" className="user-icon"><img className="user-social-media-icons-img" src={require('../assets/twitter-data/images/poll.png').default}></img></a>
+                            <a href="/" className="user-icon"><img className="user-social-media-icons-img" src={require('../assets/twitter-data/images/emoji.png').default}></img></a>
+                            <a href="/" className="user-icon"><img className="user-social-media-icons-img" src={require('../assets/twitter-data/images/schedule.png').default}></img></a>
                         </div>
-                        <div className="tweet-submit-btn-container">
-                            <button form="tweet-form" onSubmit={handleSubmit} disabled={tweetButtonDisabled} className={!tweetButtonDisabled ? "tweet-btn-active" : "tweet-btn-disabled"}>Tweet</button>
+                        <div className="user-tweet-submit-btn-container">
+                            <button form="tweet-form" onSubmit={handleSubmit} disabled={tweetButtonDisabled} className={!tweetButtonDisabled ? "user-tweet-btn-active" : "user-tweet-btn-disabled"}>Tweet</button>
                         </div>
                     </div>
                 </div>
@@ -104,38 +102,38 @@ const TimelineComponent = () => {
                 {timeline.map((item, idx) => {
                     return (
                         <div className="timeline-tweet-container" key={idx}>
-                            <div className="user-image-container">
-                                <img className="profile-pic" src={require(`../assets/twitter-data/images/${item.user.image}`).default} alt={item.user.name}></img>
+                            <div className="timeline-user-image-container">
+                                <img className="timeline-profile-pic" src={require(`../assets/twitter-data/images/${item.user.image}`).default} alt={item.user.name}></img>
                             </div>
                             <div className="timeline-tweet-box">
                                 <div className="timeline-user-info-box">
-                                    <div className="user-info-box">
+                                    <div className="timeline-user-info">
                                         <p className="timeline-user-name">{item.user.name}</p>
                                         <p className="timeline-user-handle">@{item.user.handle}</p>
                                         <p className="timeline-faux-minutes">{'\u2022'} {randomNumberGenerator()}</p>
                                     </div>
-                                    <div className="more-icon-box">
-                                        <img className="social-media-icons-img" src={require('../assets/twitter-data/images/dots.png').default}></img>
+                                    <div className="timeline-more-icon-box">
+                                        <img className="timeline-social-media-icons-img" src={require('../assets/twitter-data/images/dots.png').default}></img>
                                     </div>
                                 </div>
                                 <div className="timeline-tweet-displayed">
                                     <p>{item.tweet}</p>
                                 </div>
                                 <div className="timeline-info-icons-container">
-                                    <div className="icon-box">
-                                        <img className="social-media-icons-img" src={require('../assets/twitter-data/images/comment.png').default}></img>
+                                    <div className="timeline-icon-box">
+                                        <img className="timeline-social-media-icons-img" src={require('../assets/twitter-data/images/comment.png').default}></img>
                                         <p className="timeline-icon-stat">{item.replies}</p>
                                     </div>
-                                    <div className="icon-box">
-                                        <img className="social-media-icons-img" src={require('../assets/twitter-data/images/retweet.png').default}></img>
+                                    <div className="timeline-icon-box">
+                                        <img className="timeline-social-media-icons-img" src={require('../assets/twitter-data/images/retweet.png').default}></img>
                                         <p className="timeline-icon-stat">{item.retweets}</p>
                                     </div>
-                                    <div className="icon-box">
-                                        <img className="social-media-icons-img" src={require('../assets/twitter-data/images/like.png').default}></img>
+                                    <div className="timeline-icon-box">
+                                        <img className="timeline-social-media-icons-img" src={require('../assets/twitter-data/images/like.png').default}></img>
                                         <p className="timeline-icon-stat">{item.likes}</p>
                                     </div>
-                                    <div className="icon-box">
-                                        <img className="social-media-icons-img" src={require('../assets/twitter-data/images/share-tweet.png').default}></img>
+                                    <div className="timeline-icon-box">
+                                        <img className="timeline-social-media-icons-img" src={require('../assets/twitter-data/images/share-tweet.png').default}></img>
                                     </div>
                                 </div>
                             </div>

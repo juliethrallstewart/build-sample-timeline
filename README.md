@@ -1,5 +1,5 @@
 # To view app locally... 
-
+- git clone 
 - yarn install
 - yarn start
 

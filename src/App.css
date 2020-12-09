@@ -15,19 +15,7 @@
   background-color: white;
 }
 
-.headline {
-  text-transform: uppercase;
-}
-
-/* images */
-
-.profile-pic {
-  height: 50px;
-  width: 50px;
-  border-radius: 50px; 
-}
-
-/* timeline container */
+/** HOME CONTAINER */
 
 .home-container {
   width: 520px;
@@ -38,7 +26,7 @@
   
 }
 
-/* timeline header */
+/** Timeline Header */
 
 .timeline-container-header {
   display: flex;
@@ -59,7 +47,7 @@
   height: 50px;
 }
 
-/* user container */
+/** User Container */
 
 .user-container {
   display: flex;
@@ -83,6 +71,12 @@
   height: 100px;
 }
 
+.user-home-profile-pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px; 
+}
+
 .tweet-container {
   display: flex;
   flex-direction: column;
@@ -91,13 +85,19 @@
   padding: 0px;
 }
 
-.tweet-input-container-no-border {
+.user-home-profile-pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px; 
+}
+
+.user-tweet-input-container-no-border {
   height: auto;
   width: 100%;
   margin-top: 10px;
 }
 
-.tweet-input-container-border {
+.user-tweet-input-container-border {
   height: auto;
   width: 100%;
   margin-top: 10px;
@@ -117,17 +117,17 @@ textarea {
   font-size: 1.2em;
 }
 
-.tweet-visibility-status {
+.user-tweet-visibility-status {
   display: block;
   height: 22px;
   margin-bottom: 10px;
 }
 
-.tweet-status-hidden {
+.user-tweet-status-hidden {
   display: none;
 }
 
-.social-media-container {
+.user-social-media-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -135,15 +135,14 @@ textarea {
   padding: 10px 10px 10px 0;
 }
 
-.tweet-submit-btn-container {
+.user-tweet-submit-btn-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  /* padding-right: 10px; */
   width: 200px;
 }
 
-.tweet-btn-active {
+.user-tweet-btn-active {
   border-radius: 20px;;
   border: none;
   color: white;
@@ -153,7 +152,7 @@ textarea {
   width: 75px;
 }
 
-.tweet-btn-disabled {
+.user-tweet-btn-disabled {
   border-radius: 20px;;
   border: none;
   color: white;
@@ -164,7 +163,7 @@ textarea {
   width: 75px;
 }
 
-.social-media-icons-container {
+.user-social-media-icons-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -172,13 +171,13 @@ textarea {
   width: 180px;
 }
 
-.social-media-icons-img {
+.user-social-media-icons-img {
   width: 25px;
   height: 25px;
 
 }
 
-/* TWEET TIMELINE */
+/** Timeline */
 
 .timeline-container {
   background-color: white;
@@ -191,6 +190,21 @@ textarea {
   flex-direction: row;
   border: 1px solid #dddddd;
   padding: 10px;
+}
+
+.timeline-user-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 75px;
+  height: 100px;
+}
+
+.timeline-profile-pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
 }
 
 .timeline-tweet-box {
@@ -208,25 +222,11 @@ textarea {
   margin-bottom: -30px;
 }
 
-.user-info-box {
+.timeline-user-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: auto;
-}
-
-.timeline-info-icons-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.icon-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 70px;
 }
 
 .timeline-user-name {
@@ -243,7 +243,35 @@ textarea {
   color: #616161;
 }
 
+.timeline-info-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timeline-icon-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70px;
+}
+
 .timeline-icon-stat {
   color: #616161;
   font-size: .8em;
+}
+
+.timeline-social-media-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+
+.timeline-social-media-icons-img {
+  width: 25px;
+  height: 25px;
+
 }
