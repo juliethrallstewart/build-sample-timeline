@@ -1,38 +1,249 @@
+* {
+  box-sizing: border-box; 
+  /* border: 1px solid black; */
+}
+
+
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  min-width: 100vw;
+  background-color: white;
+}
+
+.headline {
+  text-transform: uppercase;
+}
+
+/* images */
+
+.profile-pic {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px; 
+}
+
+/* timeline container */
+
+.home-container {
+  width: 520px;
+  height: auto;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  border: 1px solid #dddddd;
+  
+}
+
+/* timeline header */
+
+.timeline-container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;;
+  background-color: white;
+  border-bottom: 1px solid  #dddddd;
+  color: black;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 20px;
+  
+}
+
+.sparkle-icon {
+  height: 50px;
+}
+
+/* user container */
+
+.user-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid  #dddddd;
+
+}
+
+.user-image-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 75px;
+  height: 100px;
+}
+
+.tweet-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  padding: 0px;
+}
+
+.tweet-input-container-no-border {
+  height: auto;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.tweet-input-container-border {
+  height: auto;
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+
+textarea {
+  height: auto;
+  width: 100%;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  color: #616161;
+  font-size: 1.2em;
+}
+
+.tweet-visibility-status {
+  display: block;
+  height: 22px;
+  margin-bottom: 10px;
+}
+
+.tweet-status-hidden {
+  display: none;
+}
+
+.social-media-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px 10px 10px 0;
+}
+
+.tweet-submit-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* padding-right: 10px; */
+  width: 200px;
+}
+
+.tweet-btn-active {
+  border-radius: 20px;;
+  border: none;
   color: white;
+  background-color: #00acee;
+  font-weight: bold;
+  height: 40px;
+  width: 75px;
 }
 
-.App-link {
-  color: #61dafb;
+.tweet-btn-disabled {
+  border-radius: 20px;;
+  border: none;
+  color: white;
+  background-color: #00acee;
+  opacity: 50%;
+  font-weight: bold;
+  height: 40px;
+  width: 75px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-media-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+
+.social-media-icons-img {
+  width: 25px;
+  height: 25px;
+
+}
+
+/* TWEET TIMELINE */
+
+.timeline-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-tweet-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #dddddd;
+  padding: 10px;
+}
+
+.timeline-tweet-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.timeline-user-info-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: -30px;
+}
+
+.user-info-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+}
+
+.timeline-info-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70px;
+}
+
+.timeline-user-name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.timeline-user-handle {
+  color: #616161;
+  margin-right: 5px;
+}
+
+.timeline-faux-minutes {
+  color: #616161;
+}
+
+.timeline-icon-stat {
+  color: #616161;
+  font-size: .8em;
 }

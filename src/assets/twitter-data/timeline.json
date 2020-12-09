@@ -1,0 +1,71 @@
+{
+    "user": {
+        "name": "Tony Stark",
+        "handle": "ironman",
+        "image": "7NBJ0wAB_400x400.jpg",
+        "timeline": [
+        {
+            "tweet": "You get hurt, hurt them back. You get killed... walk it off.",
+            "replies": 124,
+            "retweets": 63,
+            "likes": 1123
+        }
+    	]    
+    },
+    "timeline": [{
+        "user": {
+            "name": "Steven G. Rogers",
+            "handle": "cap",
+            "image": "uieCVci1_400x400.jpg"
+        },
+        "tweet": "You get hurt, hurt them back. You get killed... walk it off.",
+        "replies": 124,
+        "retweets": 63,
+        "likes": 1123,
+        "created": "2020-10-27T22:14:26Z"
+    }, {
+        "user": {
+            "name": "Bruce Banner",
+            "handle": "hulk",
+            "image": "2GjoQnxk_400x400.jpg"
+        },
+        "tweet": "HULK SMASH!!!!",
+        "replies": 2248,
+        "retweets": 566,
+        "likes": 56798,
+        "created": "2020-10-27T22:13:38Z"
+    }, {
+        "user": {
+            "name": "Bruce Banner",
+            "handle": "hulk",
+            "image": "2GjoQnxk_400x400.jpg"
+        },
+        "tweet": "heads up... i feel like i'm getting angry",
+        "replies": 458712304,
+        "retweets": 67,
+        "likes": 537,
+        "created": "2020-10-27T22:12:12Z"
+    }, {
+        "user": {
+            "name": "Natasha Romanoff",
+            "handle": "blackwidow",
+            "image": "xo9p7XOS_400x400.jpg"
+        },
+        "tweet": "Even if there's a small chance that we can undo this, I mean, we owe it to everyone who is not in this room, to try",
+        "replies": 5643,
+        "retweets": 101,
+        "likes": 5522,
+        "created": "2020-10-27T21:03:45Z"
+    }, {
+        "user": {
+            "name": "Thor Odinson",
+            "handle": "thor",
+            "image": "UkdGH8pK_400x400.jpg"
+        },
+        "tweet": "THIS DRINK, I LIKE IT! ANOTHER!",
+        "replies": 489,
+        "retweets": 5832,
+        "likes": 576,
+        "created": "2020-10-27T21:02:45Z"
+    }]
+}

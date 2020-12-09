@@ -1,3 +1,14 @@
+# To view app locally... 
+
+- yarn install
+- yarn start
+
+
+# Installed
+- used yarn create react-app
+- yarn add react-router-dom
+- yarn add node-sass@4.14.1
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
